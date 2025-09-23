@@ -5,7 +5,7 @@ export default function HeaderComponent(){
     return(
         <header className="flex justify-between border-b-[1px]">
 
-            <Image src="/logo.svg" height={135} width={135} alt="" priority/>
+            <Image src="/logo.svg" className="w-auto h-[40px]" height={300} width={300} alt="" priority/>
             <div className="flex items-center gap-[1rem]">
                 <Link href="" className="capitalize ">listings</Link>
                 <Link href="" className="capitalize">community</Link>

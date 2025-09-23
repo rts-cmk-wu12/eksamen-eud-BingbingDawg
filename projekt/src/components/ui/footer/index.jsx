@@ -10,7 +10,7 @@ export default function FooterComponent(){
         <footer className="flex justify-between border-t-[1px] bottom-0 fixed items-center z-10 left-[120px] right-[120px]">
             <div className="flex-col">
 
-                <Image className="align-center" src="/logo.svg" height={135} width={135} alt="" priority/>
+                <Image className="align-center w-auto h-[40px]" src="/logo.svg" height={300} width={300} alt="" priority/>
 
             <div className="flex items-center gap-[1rem]">
                 <Link href="https://x.com/"><RiTwitterXFill fontSize={24}/></Link>
@@ -21,22 +21,22 @@ export default function FooterComponent(){
             
             </div>
             <div>
-                <h3 className="capitalize">about swapHub</h3>
+                <h3 className="capitalize font-[600]">about swapHub</h3>
                 <p>How it works</p>
                 <p>Community guidelines</p>
                 <p>Our mission</p>
                 <p>Contact us</p>
             </div>
             <div>
-                <h3>Discover</h3>
+                <h3 className="capitalize font-[600]">Discover</h3>
                 <p>Browse catergories</p>
-                <p className="capitalize">popular swaps</p>
+                <p>popular swaps</p>
                 <p>Successful stories</p>
                 <p>Upcoming events</p>
             </div>
             <div>
-                <h3>Support</h3>
-                <p className="capitalize">help center</p>
+                <h3 className="capitalize font-[600]">Support</h3>
+                <p>help center</p>
                 <p>FAQs</p>
                 <p>Safety tips</p>
                 <p> Report an issue</p>
