@@ -7,6 +7,8 @@ import { searchContext } from "@/components/providers/search-provider";
 import { useContext } from "react";
 
 export default function SearchField({ json }) {
+
+	
 	const { setResults, setErrorMsg } = useContext(searchContext);
 
 
@@ -16,8 +18,8 @@ export default function SearchField({ json }) {
 
 		if (value !== "") {
 			var filteredData = json.filter(
-				listings => (listings.title.toLowerCase().includes(value.toLowerCase())
-                || listings.description.toLowerCase().includes(value.toLowerCase())
+				listing => (listing.title.toLowerCase().includes(value.toLowerCase())
+                
             ));
                 }
                 
@@ -30,7 +32,9 @@ export default function SearchField({ json }) {
 
 	return (
 		<div>
-			<input type="search" onChange={searchHandler} />
+			<input className="mt-[69px] border rounded-2xl mb-[48px] h-[40px] w-[30%]" type="search" onChange={searchHandler} />
+
+
 		</div>
 	);
 }

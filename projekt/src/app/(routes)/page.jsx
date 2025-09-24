@@ -1,5 +1,6 @@
 import SearchField from "@/components/forms/search-field";
 import SearchProvider from "@/components/providers/search-provider";
+import Listingslist from "@/components/ui/listings-list";
 import ProductsCard from "@/components/ui/products-card";
 
 export default async function Home() {
@@ -11,13 +12,7 @@ export default async function Home() {
     <>
       <SearchProvider>
         <SearchField json={json} />
-        <ul className="grid-product-cards items-center">
-          {json.map(listings => (
-            <li key={listings.id}>
-              <ProductsCard listings={listings} />
-            </li>
-          ))}
-        </ul>
+        <Listingslist />
           </SearchProvider>
     </>
   );

@@ -11,14 +11,19 @@ export default async function ListingDetails({ params }){
 
     return (
         <>
-        <div className="flex">
-            <Image className="w-[415px] h-[auto]" src={json.asset.url} alt="" width={200} height={200} />
-            <div>
-                <h3>{json.title}</h3>
-                <p>{json.description}</p>
-                <p>On SwapHub since: </p>
+        <div className="flex m-[31px] text-left">
+            <Image className="w-[415px] h-[415px] " src={json.asset.url} alt="" width={200} height={200} />
+            <div className="ml-[31px] ">
+                <h3 className="font-[600] text-[24px] mb-[14px]">{json.title}</h3>
+                <p className="text-[18px] mb-[37px]">{json.description}</p>
+                <p className="text-[18px]">On SwapHub since: {json.updatedAt.slice(0, 10)}</p>
             </div>
-       
+
+            <button className="text-[18px] ">Propose a swap</button>
+        </div>
+
+        <div>
+            <h3 className="font-[600] text-[26px] ml-[31px]"> Other item from this swapper</h3>
         </div>
         </>
     )

@@ -7,7 +7,7 @@ import { FaYoutube } from "react-icons/fa";
 
 export default function FooterComponent(){
     return(
-        <footer className="flex justify-between border-t-[1px] bottom-0 fixed items-center z-10 left-[120px] right-[120px]">
+        <footer className="flex justify-evenly border-t-[1px] footer-margin bg-white h-[267px] items-center z-10 ">
             <div className="flex-col">
 
                 <Image className="align-center w-auto h-[40px]" src="/logo.svg" height={300} width={300} alt="" priority/>
@@ -22,24 +22,24 @@ export default function FooterComponent(){
             </div>
             <div>
                 <h3 className="capitalize font-[600]">about swapHub</h3>
-                <p>How it works</p>
-                <p>Community guidelines</p>
-                <p>Our mission</p>
-                <p>Contact us</p>
+                <p className="font-[16px]">How it works</p>
+                <p className="font-[16px]">Community guidelines</p>
+                <p className="font-[16px]">Our mission</p>
+                <p className="font-[16px]">Contact us</p>
             </div>
             <div>
                 <h3 className="capitalize font-[600]">Discover</h3>
-                <p>Browse catergories</p>
-                <p>popular swaps</p>
-                <p>Successful stories</p>
-                <p>Upcoming events</p>
+                <p className="font-[16px]">Browse catergories</p>
+                <p className="font-[16px]">popular swaps</p>
+                <p className="font-[16px]">Successful stories</p>
+                <p className="font-[16px]">Upcoming events</p>
             </div>
             <div>
                 <h3 className="capitalize font-[600]">Support</h3>
-                <p>help center</p>
-                <p>FAQs</p>
-                <p>Safety tips</p>
-                <p> Report an issue</p>
+                <p className="font-[16px]">help center</p>
+                <p className="font-[16px]">FAQs</p>
+                <p className="font-[16px]">Safety tips</p>
+                <p className="font-[16px]"> Report an issue</p>
             </div>
         </footer>
     )
