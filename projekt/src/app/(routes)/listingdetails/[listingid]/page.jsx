@@ -1,3 +1,5 @@
+import OtherListings from "@/components/other-listings";
+import { cookies } from "next/headers";
 import Image from "next/image";
 
 export default async function ListingDetails({ params }){
@@ -8,6 +10,8 @@ export default async function ListingDetails({ params }){
     const json = await response.json();
 
     console.log(json)
+    
+    
 
     return (
         <>
@@ -22,9 +26,7 @@ export default async function ListingDetails({ params }){
             <button className="text-[18px] ">Propose a swap</button>
         </div>
 
-        <div>
-            <h3 className="font-[600] text-[26px] ml-[31px]"> Other item from this swapper</h3>
-        </div>
+        <OtherListings json={json}/>
         </>
     )
 }

@@ -26,18 +26,18 @@ export default function SigninFormular({className=""}){
         <form action={formAction} className=" mx-auto mt-[91px] mb-[91px]  border w-[320px] p-6 rounded-sm ">
                 
                 <div className="flex flex-col gap-[24px]">
-                    <label className="">
+                    <label>
                         Email
                         <input type="email" name="email" placeholder="email" className=" mt-[8px] mb-[24px] rounded-[8px] p-[8px] label-border w-full" />
-                        <p>{formState?.properties?.email.errors}</p>
+                        <p>{formState?.properties?.email?.errors}</p>
                     </label>
                 </div>
              
                 <div className=" flex flex-col gap-[24px]">
-                    <label >
+                    <label>
                         Password
                         <input type="password" name="password" placeholder="password" className="mt-[8px] mb-[24px] rounded-[8px] p-[8px] w-full label-border" />
-                        <p>{formState?.properties?.password.errors}</p>
+                        <p>{formState?.properties?.password?.errors}</p>
                     </label>
                 </div>
 
