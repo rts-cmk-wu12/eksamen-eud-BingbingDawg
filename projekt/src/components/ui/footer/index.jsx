@@ -7,10 +7,10 @@ import { FaYoutube } from "react-icons/fa";
 
 export default function FooterComponent(){
     return(
-        <footer className="flex justify-between border-t-[1px] bottom-0 fixed items-center z-10 left-[120px] right-[120px]">
+        <footer className="flex justify-between border-t-[1px] pl-[32px] pr-[32px] pt-[32px] footer-margin bg-white items-center z-10 ">
             <div className="flex-col">
 
-                <Image className="align-center" src="/logo.svg" height={135} width={135} alt="" priority/>
+                <Image className="  w-auto h-[40px] mb-[24px]" src="/logo.svg" height={300} width={300} alt="" priority/>
 
             <div className="flex items-center gap-[1rem]">
                 <Link href="https://x.com/"><RiTwitterXFill fontSize={24}/></Link>
@@ -20,27 +20,30 @@ export default function FooterComponent(){
             </div>
             
             </div>
-            <div>
-                <h3 className="capitalize">about swapHub</h3>
-                <p>How it works</p>
-                <p>Community guidelines</p>
-                <p>Our mission</p>
-                <p>Contact us</p>
-            </div>
-            <div>
-                <h3>Discover</h3>
-                <p>Browse catergories</p>
-                <p className="capitalize">popular swaps</p>
-                <p>Successful stories</p>
-                <p>Upcoming events</p>
-            </div>
-            <div>
-                <h3>Support</h3>
-                <p className="capitalize">help center</p>
-                <p>FAQs</p>
-                <p>Safety tips</p>
-                <p> Report an issue</p>
-            </div>
+            <ul>
+                <h3 className="capitalize font-[600]">about swapHub</h3>
+                
+                <li><Link href="#" className="font-[16px]">How it works</Link></li>
+                <li><Link href="#" className="font-[16px]">Community guidelines</Link></li>
+                <li><Link href="#" className="font-[16px]">Our mission</Link></li>
+                <li><Link href="#" className="font-[16px]">Contact us</Link></li>
+                
+            </ul>
+
+            <ul>
+                <h3 className="capitalize font-[600]">Discover</h3>
+                <li><Link href="#" className="font-[16px]">Browse catergories</Link></li>
+                <li><Link href="#" className="font-[16px]">popular swaps</Link></li>
+                <li><Link href="#" className="font-[16px]">Successful stories</Link></li>
+                <li><Link href="#" className="font-[16px]">Upcoming events</Link></li>
+            </ul>
+            <ul>
+                <h3 className="capitalize font-[600]">Support</h3>
+                <li><Link href="#" className="font-[16px]">help center</Link></li>
+                <li><Link href="#" className="font-[16px]">FAQs</Link></li>
+                <li><Link href="#" className="font-[16px]">Safety tips</Link></li>
+                <li><Link href="#" className="font-[16px]"> Report an issue</Link></li>
+            </ul>
         </footer>
     )
 }
