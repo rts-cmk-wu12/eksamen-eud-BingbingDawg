@@ -2,50 +2,47 @@
 
 "use client";
 
-import CreateKageperson from "@/actions/create-kageperson";
-import { useActionState, useEffect, useState } from "react";
+
+import CreateUser from "@/actions/create-user";
+import { useActionState, useEffect} from "react";
 
 export default function CreateUserForm() {
     const [formState, formAction, isPending] = useActionState(CreateUser)
-    const [slug, setSlug] = useState("");
     
     useEffect(function() {
         console.log(formState)
     }, [formState])
 
-    function slugGenerator(event) {
-        const form = event.target.form;
-        const firstname = form.firstname.value;
-        const lastname = form.lastname.value;
 
-        setSlug(`${firstname}-${lastname}` .toLowerCase().replaceAll(" ", "-"));
-    }
-
-    return (
-        <form action={formAction}>
-            <div>
+    return ( isPending ? <p>...Loading</p> :
+        
+        <form action={formAction} className=" mx-auto mt-[91px] mb-[91px]  border w-[320px] p-6 rounded-sm ">
+            <div className="flex flex-col gap-[24px]">
                 <label>
                     <span >Email: </span>
-                    <input className="border-black border-2" type="email" name="email"  defaultValue={formState?.data?.email}/>
-                    <input className="border-black border-2" type="text" name="slug" readOnly value={slug}/>
+                    <input className=" mt-[8px] mb-[2px] rounded-[8px] p-[8px] label-border w-full" type="email" name="email"  defaultValue={formState?.data?.email} />
+                    <p className="mb-[10px]">{formState?.properties?.email?.errors}</p>
                 </label>
             </div>
-            <div>
+            <div className="flex flex-col gap-[24px]">
                 <label>
-                    <span >Dej: </span>
-                    <input className="border-black border-2" type="text" name="firstname" onChange={slugGenerator} defaultValue={formState?.data?.dough} />
+                    <span >Firstname: </span>
+                    <input className=" mt-[8px] mb-[2px] rounded-[8px] p-[8px] label-border w-full" type="text" name="firstname" defaultValue={formState?.data?.firstname} />
+                    <p className="mb-[10px]">{formState?.properties?.firstname?.errors}</p>
                 </label>
             </div>
-            <div>
+            <div className="flex flex-col gap-[24px]">
                 <label>
-                    <span>topping: </span>
-                    <input className="border-black border-2" type="text" name="lastname" onChange={slugGenerator} defaultValue={formState?.data?.topping} />
+                    <span>Lastname: </span>
+                    <input className=" mt-[8px] mb-[2px] rounded-[8px] p-[8px] label-border w-full" type="text" name="lastname" defaultValue={formState?.data?.lastname} />
+                    <p className="mb-[10px]">{formState?.properties?.lastname?.errors}</p>
                 </label>
             </div>
-            <div>
+            <div className="flex flex-col gap-[24px]">
                 <label>
-                    <span>Pris: </span>
-                    <input className="border-black border-2" type="text" name="price" defaultValue={formState?.data?.price} />
+                    <span>Password: </span>
+                    <input className=" mt-[8px] mb-[2px] rounded-[8px] p-[8px] label-border w-full" type="password" name="password" defaultValue={formState?.data?.password} />
+                    <p className="mb-[10px]">{formState?.properties?.password?.errors}</p>
                 </label>
             </div>
             <button type="submit">opret</button>

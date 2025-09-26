@@ -19,7 +19,7 @@ const cookieStore = await cookies()
     return(
     <>
     <h3>Hello {userJson.firstname} {userJson.lastname}</h3>
-    <UpdateUserForm user={userJson}/>
+    <UpdateUserForm/>
     </>
 )
 }

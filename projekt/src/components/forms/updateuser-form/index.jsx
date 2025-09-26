@@ -22,7 +22,7 @@ function reducer(state, action) {
 	}
 }
 
-export default function UpdateUserForm({ userJson }) {
+export default function UpdateUserForm() {
 	const [updateFormState, updateFormAction] = useActionState(updateUser, null);
 	const [state, dispatch] = useReducer(reducer, {
 		showModal: false,
@@ -62,7 +62,7 @@ export default function UpdateUserForm({ userJson }) {
 				<div className="flex flex-col gap-[24px]">
 					<label>
 						<span>Password: </span>
-						<input className="border-black border-2" type="text" name="password" defaultValue={state?.currentUser?.password} />
+						<input className="border-black border-2" type="password" name="password" defaultValue={state?.currentUser?.password} />
 					</label>
 				</div>
 				<input type="hidden" name="id" value={state.currentUser?.id} readOnly />

@@ -8,7 +8,7 @@ import { toast } from "react-toastify";
 import Link from "next/link";
 import signinAction from "@/actions/sign-in";
 
-export default function SigninFormular({className=""}){
+export default function SigninFormular(){
     const [formState, formAction, isPending] = useActionState(signinAction, {});
 
     useEffect(function() {
